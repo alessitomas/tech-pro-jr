@@ -35,17 +35,18 @@ export default function Forms () {
     }
     console.log("Infos", formInfo )
 
-  //   try{
-  //     console.log('eae')
-  //     const {data} = await axios({
-  //       url: "/api/cadastro_candidato",
-  //       method: "POST",
-  //       data: formInfo
-  //     });
-  //     console.log("Response-Back", data)
-  //   } catch (error) {
-  //     console.log("Error", error);
-  // }
+    try{
+      console.log('eae')
+      const {data} = await axios({
+        url: "/api/cadastro_candidato",
+        method: "POST",
+        data: formInfo
+      });
+      console.log("Response-Back", data)
+    } catch (error) {
+      console.log("Error", error);
+  }
+   }
 
 return (
   <Container>
@@ -93,7 +94,10 @@ return (
     <Sair/>
 
   </Container>
-)
 
- }
-  }
+
+   
+)
+}
+
+
