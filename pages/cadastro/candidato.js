@@ -2,10 +2,11 @@ import logo_grande from "../../public/insper_junior_logo_inteiro.png";
 import Head from "next/head";
 import { Login } from "../../components/botoes";
 import {Cadastro_avaliador} from "../../components/botoes"
-import {Sair} from "../../components/botoes"
+import {Sair,SubmitForm} from "../../components/botoes"
 import { useState } from "react";
 import {Container, Input, Button} from '@chakra-ui/react'
-import { axios } from "axios";
+import axios from "axios";
+
 
 export default function Forms () {
   const [nome, setNome] = useState("");
@@ -18,7 +19,7 @@ export default function Forms () {
   const [email, setEmail] = useState("");
   const [horario, setHorario] = useState("");
 
-  const handleSumit = async (event) => { 
+  const handleSubmit = async (event) => { 
     event.preventDefault();
 
     const formInfo = {
@@ -37,11 +38,8 @@ export default function Forms () {
 
     try{
       console.log('eae')
-      const {data} = await axios({
-        url: "/api/cadastro_candidato",
-        method: "POST",
-        data: formInfo
-      });
+
+      const { data } = await axios.post('http://localhost:8080/api/login', formInfo)
       console.log("Response-Back", data)
     } catch (error) {
       console.log("Error", error);
@@ -87,8 +85,31 @@ return (
       <p>Horário de Disponibilidade</p>
       <Input onChange={({ target }) => setHorario(target?.value)} />
       <br/>
+      
+      <Button
+        onClick = {handleSubmit}
 
-    <button onClick={handleSumit} placeholder='Cadastrar'></button>
+        // {...props}
+         flex={1} 
+        px={8}
+        fontSize={'sm'}
+        rounded={'full'}
+        bg={'red.400'}
+        color={'white'}
+        boxShadow={
+          '0px 1px 25px -5px rgb(66 153 225 / 48%), 0 10px 10px -5px rgb(66 153 225 / 43%)'
+        }
+
+        _hover={{
+          bg: 'red.500',
+        }}
+        _focus={{
+          bg: 'red.500',
+          
+        }}>
+        
+        Login!
+      </Button>
 
     <Sair/>
 
