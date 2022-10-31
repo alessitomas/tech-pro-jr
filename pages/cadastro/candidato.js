@@ -4,9 +4,11 @@ import { Login } from "../../components/botoes";
 import {Cadastro_avaliador} from "../../components/botoes"
 import {Sair,SubmitForm} from "../../components/botoes"
 import { useState } from "react";
-import {Container, Input, Button} from '@chakra-ui/react'
 import axios from "axios";
-
+import router from "next/router";
+import WithSubnavigation_2 from "../../components/navbar_cadastrarvaliador";
+import Login_botao from "../../components/botao_sair";
+import { SimpleGrid, ButtonGroup, Box, Container, Input, Button, Flex, Stack } from '@chakra-ui/react'
 
 export default function Forms () {
   const [nome, setNome] = useState("");
@@ -21,6 +23,7 @@ export default function Forms () {
 
   const handleSubmit = async (event) => { 
     event.preventDefault();
+    // const router = useRouter();
 
     const formInfo = {
       nome,
@@ -47,8 +50,7 @@ export default function Forms () {
 
 return (
   <Container>
-
-    <Cadastro_avaliador/>
+    <WithSubnavigation_2/>
     <br/><br/>
     <p>Nome Completo</p>
       <Input onChange={({ target }) => setNome(target?.value)} />
@@ -85,14 +87,16 @@ return (
       <p>Horário de Disponibilidade</p>
       <Input onChange={({ target }) => setHorario(target?.value)} />
       <br/>
-      
+
+      {/* <Flex justifyContent="center" alignItems="center"> */}
+    <Stack variant="outline" spacing="10">
       <Button
         onClick = {handleSubmit}
 
         // {...props}
-         flex={1} 
-        px={8}
-        fontSize={'sm'}
+        // flex={1} 
+        px={10}
+        fontSize={'md'}
         rounded={'full'}
         bg={'red.400'}
         color={'white'}
@@ -108,11 +112,13 @@ return (
           
         }}>
         
-        Login!
+        Login
       </Button>
+    {/* </Flex> */}
+    {/* <SimpleGrid rows={4} spacing={2}></SimpleGrid> */}
 
-    <Sair/>
-
+      <Login_botao />
+    </Stack>
   </Container>
 )
   }
