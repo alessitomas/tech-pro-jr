@@ -1,8 +1,5 @@
 import logo_grande from "../../public/insper_junior_logo_inteiro.png";
 import Head from "next/head";
-import { Login } from "../../components/botoes";
-import {Cadastro_avaliador} from "../../components/botoes"
-import {Sair,SubmitForm} from "../../components/botoes"
 import { useState } from "react";
 import axios from "axios";
 import router from "next/router";
@@ -22,6 +19,7 @@ export default function Forms () {
 
   const handleSubmit = async (event) => { 
     event.preventDefault();
+    router.push('/login')
     // const router = useRouter();
 
     const formInfo = {

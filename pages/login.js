@@ -1,6 +1,4 @@
 import Head from "next/head";
-import { Sair } from "../components/botoes";
-import { Login_entrar } from "../components/botoes";
 import {
   Flex,
   Box,
@@ -18,14 +16,14 @@ import {
 import WithSubnavigation from "../components/navbar";
 import { red } from "@mui/material/colors";
 import { useRouter } from "next/router";
-import WithSubnavigation4 from "../components/navbar_com_botao_sair";
+import WithSubnavigation_3 from "../components/navbar_CADASTROS";
 
 
 export default function paginaLogin(){
   const router = useRouter();
     return (
       <>
-      <WithSubnavigation4/>
+      <WithSubnavigation_3/>
       <Head>
         <title>Insper Junior</title>
         <meta name="description" content="Insper Junior" />

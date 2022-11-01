@@ -72,7 +72,7 @@ export default function WithSubnavigation_3() {
           <Flex display={{ base: 'none', md: 'flex' }} ml={10}>
           </Flex>
         </Flex>
-        {/* <Stack
+        <Stack
           flex={{ base: 1, md: 0 }}
           justify={'flex-end'}
           direction={'row'}
@@ -89,7 +89,7 @@ export default function WithSubnavigation_3() {
             }}>
             Sair
           </Button>
-        </Stack> */}
+        </Stack>
       </Flex>
       <Collapse in={isOpen} animateOpacity>
       </Collapse>

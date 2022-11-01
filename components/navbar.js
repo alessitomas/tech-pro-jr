@@ -82,7 +82,7 @@ export default function WithSubnavigation() {
             variant={'link'}
             onClick = {() => router.push('/login')}
           >
-            Login
+            Entrar
           </Button>
           <Button
             display={{ base: 'none', md: 'inline-flex' }}
