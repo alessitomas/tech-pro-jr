@@ -66,11 +66,13 @@ export default function WithSubnavigation_3() {
           height = '70px'
           src='/insper_junior_logo_inteiro.png'
           alt='Insper Jr.'
-        />
+          onClick = {() => router.push('/')}
+          cursor = {'pointer'}
+          />
           <Flex display={{ base: 'none', md: 'flex' }} ml={10}>
           </Flex>
         </Flex>
-        <Stack
+        {/* <Stack
           flex={{ base: 1, md: 0 }}
           justify={'flex-end'}
           direction={'row'}
@@ -85,9 +87,9 @@ export default function WithSubnavigation_3() {
             _hover={{
               bg: 'red.400',
             }}>
-            Cadastrar como Candidato
+            Sair
           </Button>
-        </Stack>
+        </Stack> */}
       </Flex>
       <Collapse in={isOpen} animateOpacity>
       </Collapse>

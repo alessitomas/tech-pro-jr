@@ -25,7 +25,7 @@ import {
   ChevronRightIcon,
 } from '@chakra-ui/icons';
 
-export default function WithSubnavigation_2() {
+export default function WithSubnavigation4() {
   const { isOpen, onToggle } = useDisclosure();
   const router = useRouter();
 
@@ -76,16 +76,25 @@ export default function WithSubnavigation_2() {
           direction={'row'}
           spacing={6}>
           <Button
+            as={'a'}
+            fontSize={'sm'}
+            fontWeight={400}
+            variant={'link'}
+            onClick = {() => router.push('/')}
+          >
+            Sair
+          </Button>
+          <Button
             display={{ base: 'none', md: 'inline-flex' }}
             fontSize={'sm'}
             fontWeight={600}
             color={'white'}
             bg={'red.500'}
-            onClick = {() => router.push('/cadastro/avaliador')}
+            onClick = {() => router.push('/cadastro/candidato')}
             _hover={{
               bg: 'red.400',
             }}>
-            Cadastrar como Avaliador
+            Cadastre-se
           </Button>
         </Stack>
       </Flex>

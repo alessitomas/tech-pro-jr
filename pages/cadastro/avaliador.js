@@ -6,8 +6,8 @@ import {Sair,SubmitForm} from "../../components/botoes"
 import { useState } from "react";
 import {Container, Input, Button, Stack} from '@chakra-ui/react'
 import axios from "axios";
-import WithSubnavigation_3 from "../../components/navbar_cadastrarcandidato";
-import Login_botao from "../../components/botao_sair";
+import WithSubnavigation_3 from "../../components/navbar_CADASTROS";
+import Sair_botao from "../../components/botao_sair";
 
 
 
@@ -37,8 +37,10 @@ export default function Forms () {
   }}
 
 return (
+  <div>
+  <WithSubnavigation_3/>
   <Container>
-    <WithSubnavigation_3/>
+    
     <br/><br/>
     <p>Nome Completo</p>
       <Input onChange={({ target }) => setNome(target?.value)} />
@@ -76,8 +78,9 @@ return (
     {/* </Flex> */}
     {/* <SimpleGrid rows={4} spacing={2}></SimpleGrid> */}
 
-      <Login_botao />
+      <Sair_botao />
     </Stack>
   </Container>
+  </div>
 )
   }

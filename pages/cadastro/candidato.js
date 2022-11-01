@@ -6,8 +6,7 @@ import {Sair,SubmitForm} from "../../components/botoes"
 import { useState } from "react";
 import axios from "axios";
 import router from "next/router";
-import WithSubnavigation_2 from "../../components/navbar_cadastrarvaliador";
-import Login_botao from "../../components/botao_sair";
+import WithSubnavigation_3 from "../../components/navbar_CADASTROS";
 import { SimpleGrid, ButtonGroup, Box, Container, Input, Button, Flex, Stack } from '@chakra-ui/react'
 
 export default function Forms () {
@@ -49,47 +48,47 @@ export default function Forms () {
   }}
 
 return (
-  <Container>
-    <WithSubnavigation_2/>
-    <br/><br/>
-    <p>Nome Completo</p>
-      <Input onChange={({ target }) => setNome(target?.value)} />
+  <div>
+    <WithSubnavigation_3/>
+    <Container>
+      
       <br/><br/>
+      <p>Nome Completo</p>
+        <Input onChange={({ target }) => setNome(target?.value)} />
+        <br/><br/>
 
-      <p>Gênero</p>
-      <Input onChange={({ target }) => setGenero(target?.value)} />
-      <br/><br/>
+        <p>Gênero</p>
+        <Input onChange={({ target }) => setGenero(target?.value)} />
+        <br/><br/>
 
-      <p>Data de Nascimento</p>
-      <Input onChange={({ target }) => setNascimento(target?.value)}   />
-      <br/><br/>
-      <p>Curso</p>
+        <p>Data de Nascimento</p>
+        <Input onChange={({ target }) => setNascimento(target?.value)}   />
+        <br/><br/>
+        <p>Curso</p>
 
-      <Input onChange={({ target }) => setCurso(target?.value)} />
-      <br/><br/>
+        <Input onChange={({ target }) => setCurso(target?.value)} />
+        <br/><br/>
 
-      <p>Semestre</p>
-      <Input onChange={({ target }) => setSemestre(target?.value)} />
-      <br/><br/>
+        <p>Semestre</p>
+        <Input onChange={({ target }) => setSemestre(target?.value)} />
+        <br/><br/>
 
-      <p>Área de Atuação</p>
-      <Input onChange={({ target }) => setAtuacao(target?.value)} />
-      <br/><br/>
+        <p>Área de Atuação</p>
+        <Input onChange={({ target }) => setAtuacao(target?.value)} />
+        <br/><br/>
 
-      <p>Número de celular</p>
-      <Input onChange={({ target }) => setCelular(target?.value)}  placeholder='+11 (99) 9999-9999'/>
-      <br/><br/>
+        <p>Número de celular</p>
+        <Input onChange={({ target }) => setCelular(target?.value)}  placeholder='+11 (99) 9999-9999'/>
+        <br/><br/>
 
-      <p>Email</p>
-      <Input onChange={({ target }) => setEmail(target?.value)}  placeholder='email@email.com.br'/>
-      <br/><br/>
+        <p>Email</p>
+        <Input onChange={({ target }) => setEmail(target?.value)}  placeholder='email@email.com.br'/>
+        <br/><br/>
+        <Stack variant="outline" spacing="5">
+        <p>Horário de Disponibilidade</p>
+        <Input onChange={({ target }) => setHorario(target?.value)} />
+        <br/>
 
-      <p>Horário de Disponibilidade</p>
-      <Input onChange={({ target }) => setHorario(target?.value)} />
-      <br/>
-
-      {/* <Flex justifyContent="center" alignItems="center"> */}
-    <Stack variant="outline" spacing="10">
       <Button
         onClick = {handleSubmit}
 
@@ -116,9 +115,10 @@ return (
       </Button>
     {/* </Flex> */}
     {/* <SimpleGrid rows={4} spacing={2}></SimpleGrid> */}
+    <Box h='40px' bg=''></Box>
 
-      <Login_botao />
     </Stack>
   </Container>
+  </div>
 )
   }
