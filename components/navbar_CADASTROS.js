@@ -83,7 +83,7 @@ export default function WithSubnavigation_3() {
             fontWeight={600}
             color={'white'}
             bg={'red.500'}
-            onClick = {() => router.push('/cadastro/candidato')}
+            onClick = {() => router.push('/')}
             _hover={{
               bg: 'red.400',
             }}>
