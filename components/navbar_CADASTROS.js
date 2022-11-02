@@ -25,7 +25,7 @@ import {
   ChevronRightIcon,
 } from '@chakra-ui/icons';
 
-export default function WithSubnavigation() {
+export default function WithSubnavigation_3() {
   const { isOpen, onToggle } = useDisclosure();
   const router = useRouter();
 
@@ -66,7 +66,9 @@ export default function WithSubnavigation() {
           height = '70px'
           src='/insper_junior_logo_inteiro.png'
           alt='Insper Jr.'
-        />
+          onClick = {() => router.push('/')}
+          cursor = {'pointer'}
+          />
           <Flex display={{ base: 'none', md: 'flex' }} ml={10}>
           </Flex>
         </Flex>
@@ -76,26 +78,16 @@ export default function WithSubnavigation() {
           direction={'row'}
           spacing={6}>
           <Button
-            cursor = {'pointer'}
-            as={'a'}
-            fontSize={'sm'}
-            fontWeight={400}
-            variant={'link'}
-            onClick = {() => router.push('/login')}
-          >
-            Entrar
-          </Button>
-          <Button
             display={{ base: 'none', md: 'inline-flex' }}
             fontSize={'sm'}
             fontWeight={600}
             color={'white'}
             bg={'red.500'}
-            onClick = {() => router.push('/cadastro/candidato')}
+            onClick = {() => router.push('/')}
             _hover={{
               bg: 'red.400',
             }}>
-            Cadastre-se
+            Sair
           </Button>
         </Stack>
       </Flex>

@@ -4,10 +4,21 @@ import { Login } from "../../components/botoes";
 import {Cadastro_candidato} from "../../components/botoes"
 import {Sair,SubmitForm} from "../../components/botoes"
 import { useState } from "react";
+<<<<<<< HEAD
 import {Container, Input, Button} from '@chakra-ui/react'
 import axios from "axios";
 
 
+=======
+import {Container, Input, Button, Stack} from '@chakra-ui/react'
+import axios from "axios";
+import WithSubnavigation_3 from "../../components/navbar_CADASTROS";
+import Sair_botao from "../../components/botao_sair";
+
+
+
+
+>>>>>>> main
 export default function Forms () {
   const [nome, setNome] = useState("");
   const [horario, setGenero] = useState("");
@@ -33,9 +44,10 @@ export default function Forms () {
   }}
 
 return (
+  <div>
+  <WithSubnavigation_3/>
   <Container>
-
-    <Cadastro_candidato/>
+    
     <br/><br/>
     <p>Nome Completo</p>
       <Input onChange={({ target }) => setNome(target?.value)} />
@@ -45,13 +57,14 @@ return (
       <Input onChange={({ target }) => setGenero(target?.value)} />
       <br/><br/>
 
+    <Stack variant="outline" spacing="10">
       <Button
         onClick = {handleSubmit}
 
         // {...props}
-         flex={1} 
-        px={8}
-        fontSize={'sm'}
+        // flex={1} 
+        px={10}
+        fontSize={'md'}
         rounded={'full'}
         bg={'red.400'}
         color={'white'}
@@ -67,11 +80,14 @@ return (
           
         }}>
         
-        Login!
+        Login
       </Button>
+    {/* </Flex> */}
+    {/* <SimpleGrid rows={4} spacing={2}></SimpleGrid> */}
 
-    <Sair/>
-
+      <Sair_botao />
+    </Stack>
   </Container>
+  </div>
 )
   }

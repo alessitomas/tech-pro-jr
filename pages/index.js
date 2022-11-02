@@ -1,13 +1,10 @@
 
 import logo_grande from "../public/insper_junior_logo_inteiro.png";
 import Head from "next/head";
-import { Login } from "../components/botoes";
-import { Cadastro_candidato } from "../components/botoes";
 import WithSubnavigation from "../components/navbar";
-import { Center } from "@chakra-ui/react";
-import ClickMe from "../components/botao_cadastro";
+import { Center, SimpleGrid, bgGradient, Box } from "@chakra-ui/react";
 import Edital from "../components/botao_edital";
-import { SimpleGrid, bgGradient, Box } from '@chakra-ui/react'
+
 function inicialPage(){
   return (
     <>
