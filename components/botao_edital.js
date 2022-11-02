@@ -7,11 +7,10 @@ export default function FollowButtonWithShadow() {
   return (
     <Flex h="10vh" justifyContent="center" alignItems="center">
       <Button
-        onClick = {() => router.push('/cadastro/candidato')}
+        onClick = {() => router.push('https://drive.google.com/file/d/13crvOYw7QT3TH2SWAiwPEwfQ4MiV_GIB/view')}
 
         // {...props}
         mr={500}
-        ml={500}
         flex={1} 
         px={8}
         fontSize={'sm'}
@@ -30,7 +29,7 @@ export default function FollowButtonWithShadow() {
           
         }}>
         
-        Cadastre-se Já!
+        Edital
       </Button>
     </Flex>
   );

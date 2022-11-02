@@ -1,5 +1,5 @@
 import { ChakraProvider } from '@chakra-ui/react'
-
+import '../styles/style.css'
 function MyApp({ Component, pageProps }) {
   return (
     <ChakraProvider>
