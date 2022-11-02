@@ -1,5 +1,5 @@
 import styles from '../../../../styles/area_admin.module.css'
-
+import WithSubnavigation_3 from '../../../../components/navbar_CADASTROS'
 
 export const getStaticPaths = async () => {
     const res = await fetch('https://jsonplaceholder.typicode.com/users')
@@ -31,6 +31,8 @@ export const getStaticProps = async (context) => {
 
 const Details = (props) => {
     return ( 
+        <>
+        < WithSubnavigation_3/>
 
         <div className={styles.detail}>  
             <h1> {props.candidato.name} </h1>
@@ -38,6 +40,7 @@ const Details = (props) => {
             <p> {props.candidato.website} </p>
             <p> {props.candidato.address.city} </p>
         </div>
+            </>
      );
 }
  
