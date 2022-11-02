@@ -10,22 +10,23 @@ export default function FollowButtonWithShadow() {
         onClick = {() => router.push('https://drive.google.com/file/d/13crvOYw7QT3TH2SWAiwPEwfQ4MiV_GIB/view')}
 
         // {...props}
-        mr={500}
+        
         flex={1} 
-        px={8}
+        mr={500}
+        ml={400}
         fontSize={'sm'}
         rounded={'full'}
-        bg={'red.400'}
+        bg={'red.500'}
         color={'white'}
         boxShadow={
           '0px 1px 25px -5px rgb(66 153 225 / 48%), 0 10px 10px -5px rgb(66 153 225 / 43%)'
         }
 
         _hover={{
-          bg: 'red.500',
+          bg: 'red.400',
         }}
         _focus={{
-          bg: 'red.500',
+          bg: 'red.400',
           
         }}>
         
