@@ -16,7 +16,7 @@ export default function Forms () {
   const [celular, setCelular] = useState("");
   const [email, setEmail] = useState("");
   const [horario, setHorario] = useState("");
-
+  const [bolsista, setBolsista] = useState("");
   const handleSubmit = async (event) => { 
     event.preventDefault();
     router.push('/login')
@@ -31,7 +31,8 @@ export default function Forms () {
       atuacao,
       celular,
       email,
-      horario
+      horario,
+      bolsista
 
     }
     console.log("Infos", formInfo )
@@ -73,6 +74,10 @@ return (
 
         <p>Área de Atuação</p>
         <Input onChange={({ target }) => setAtuacao(target?.value)} />
+        <br/><br/>
+
+        <p>Bolsista</p>
+        <Input onChange={({ target }) => setBolsista(target?.value)}  placeholder='Sim/Não'/>
         <br/><br/>
 
         <p>Número de celular</p>
