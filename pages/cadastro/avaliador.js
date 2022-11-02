@@ -4,6 +4,12 @@ import { Login } from "../../components/botoes";
 import {Cadastro_candidato} from "../../components/botoes"
 import {Sair,SubmitForm} from "../../components/botoes"
 import { useState } from "react";
+<<<<<<< HEAD
+import {Container, Input, Button} from '@chakra-ui/react'
+import axios from "axios";
+
+
+=======
 import {Container, Input, Button, Stack} from '@chakra-ui/react'
 import axios from "axios";
 import WithSubnavigation_3 from "../../components/navbar_CADASTROS";
@@ -12,6 +18,7 @@ import Sair_botao from "../../components/botao_sair";
 
 
 
+>>>>>>> main
 export default function Forms () {
   const [nome, setNome] = useState("");
   const [horario, setGenero] = useState("");
