@@ -1,5 +1,4 @@
-
-
+import { Forms } from '../pages/cadastro/candidato'
 import { useRouter } from "next/router";
 // import styles from "../styles/components/Toolbar.module.css";
 
@@ -36,6 +35,14 @@ export const Cadastro_candidato = () => {
     const router = useRouter();
     return (
           <button type="button" onClick={() => router.push("/area/candidato")}> Entrar</button>
+      
+    );
+  };
+
+  export const SubmitForm = () => {
+    const router = useRouter();
+    return (
+      <h1><button onClick={Forms.handleSubmit} placeholder='Entrar'></button></h1>
       
     );
   };
