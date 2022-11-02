@@ -76,6 +76,7 @@ export default function WithSubnavigation() {
           direction={'row'}
           spacing={6}>
           <Button
+            cursor = {'pointer'}
             as={'a'}
             fontSize={'sm'}
             fontWeight={400}
