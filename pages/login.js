@@ -66,7 +66,7 @@ export default function paginaLogin(){
                 <Link color={'red.500'}>Esqueceu sua senha?</Link>
               </Stack>
               <Button
-                onClick = {() => router.push('/')}
+                onClick = {() => router.push('/area/candidato')}
                 bg={'red.500'}
                 color={'white'}
                 _hover={{
