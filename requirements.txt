@@ -1,0 +1,2 @@
+npm i @chakra-ui/react
+npm i @chakra-ui/icons
