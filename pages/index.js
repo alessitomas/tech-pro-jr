@@ -39,13 +39,7 @@ Fases do Processo de Engenharia:
 
 As datas de cada fase e uma melhor descrição estão no nosso edital:</h1>
       </Center>
-      <ClickMe/>
-    
-
-    <div className="texto_ps">
-       Inserir texto aqui
-    </div>
-
+      <ClickMe />
    </>  
   )
 }

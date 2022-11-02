@@ -12,12 +12,13 @@ import {
   Heading,
   Text,
   useColorModeValue,
+  backgroundImage
 } from '@chakra-ui/react';
 import WithSubnavigation from "../components/navbar";
 import { red } from "@mui/material/colors";
 import { useRouter } from "next/router";
 import WithSubnavigation_3 from "../components/navbar_CADASTROS";
-
+// import fundo_login from "../public/fundo_login"
 
 export default function paginaLogin(){
   const router = useRouter();
@@ -33,7 +34,8 @@ export default function paginaLogin(){
       minH={'100vh'}
       align={'center'}
       justify={'center'}
-      bg={useColorModeValue('gray.50', 'gray.800')}>
+      bg={useColorModeValue('gray.50', 'gray.800')}
+    >
       <Stack spacing={8} mx={'auto'} maxW={'lg'} py={12} px={6}>
         <Stack align={'center'}>
           <Heading fontSize={'4xl'} color = {'red.500'}>Faça login na sua conta</Heading>
@@ -70,7 +72,7 @@ export default function paginaLogin(){
                 _hover={{
                   bg: 'red.500',
                 }}>
-                Login
+                Entrar
               </Button>
             </Stack>
           </Stack>
