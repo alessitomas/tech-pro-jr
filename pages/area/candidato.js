@@ -15,41 +15,26 @@ function Area_do_candidato(){
     </Head>
 
     <WithSubnavigation_3/>
-    <VStack spacing = '10px'>
       <ServerQuickActions/>
-      
+    <Box h='60px' bg=''></Box>
+
       <Flex 
         align={'center'}
         justify={'center'}>
 
       
-        <Box bg='red' w='10%' p={4} color='white'>
-          Candidato:
+        <Box bg='' border='1px' w='40%' p={4} color='black'>
+        
+          <p>Candidato:</p>
+          <br></br>
+          <p>Atuação:</p>
+          <br></br>
+          <p>Curso:</p>
+          <br></br>
+          <p>Semestre:</p>
+   
         </Box>
       </Flex>
-      <Flex 
-        align={'center'}
-        justify={'center'}>
-        <Box bg='red' w='10%' p={4} color='white'>
-          Atuação:
-        </Box>
-      </Flex>
-      <Flex 
-        align={'center'}
-        justify={'center'}>
-        <Box bg='red' w='10%' p={4} color='white'>
-          Curso:
-        </Box>
-      </Flex>
-      <Flex 
-        align={'center'}
-        justify={'center'}>
-        <Box bg='red' w='10%' p={4} color='white'>      
-          Semestre:
-        </Box>
-      
-      </Flex>
-    </VStack>
       
     </>  
   );
