@@ -2,7 +2,7 @@ import logo_grande from "../../public/insper_junior_logo_inteiro.png";
 import Head from "next/head";
 import WithSubnavigation_3 from "../../components/navbar_CADASTROS";
 import ServerQuickActions from '../../components/botao/botao_candidatos';
-import {Box, Flex, VStack, Textarea, Spacer} from '@chakra-ui/react'
+import {Box, Flex, VStack, Textarea, Spacer,useColorModeValue} from '@chakra-ui/react'
 
 function Area_do_avaliador(){
   
@@ -15,14 +15,16 @@ function Area_do_avaliador(){
     </Head>
 
     <WithSubnavigation_3/>
+    <div classname= "bg">
       <ServerQuickActions/>
-    <Box h='60px' bg=''></Box>
+    <Box h='60px' ></Box>
     <VStack spacing ={10} align='stretch'>
       <Flex 
         align={'center'}
-        justify={'center'}>
+        justify={'center'}
+        >
 
-        <Box bg='' border='1px' w='50%' p={4} color='black'>
+        <Box   border='1px' w='50%' p={4} color='black'>
         
           <p>Candidatos a serem avaliados:</p>
           <br></br>
@@ -40,8 +42,7 @@ function Area_do_avaliador(){
       </Flex>
       </Box>
     </VStack>
-       
-
+    </div>
      
 
       </>  
