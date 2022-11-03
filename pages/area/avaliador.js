@@ -19,7 +19,7 @@ function Area_do_avaliador(){
       minH={'100vh'}
       align={'center'}
       justify={'center'}
-      bg={useColorModeValue('#efefefff')}
+
     >
     <WithSubnavigation_3/>
 
@@ -32,7 +32,7 @@ function Area_do_avaliador(){
         
         >
 
-        <Box bg = 'grey.100' border='1px' w='50%' p={4} color='black'>
+        <Box  border='1px' w='50%' p={4} color='black'>
         
           <p>Candidatos a serem avaliados:</p>
           <br></br>
@@ -46,7 +46,7 @@ function Area_do_avaliador(){
       </Flex>
       <Box>
       <Flex align='center' justify= 'center' >
-      <Textarea w = '55%' bg = 'grey.100' placeholder='Avaliação dos candidatos'  />
+      <Textarea w = '55%'  placeholder='Avaliação dos candidatos'  />
       </Flex>
       </Box>
       <FollowButtonWithShadow_3/>

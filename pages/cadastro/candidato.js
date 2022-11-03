@@ -49,9 +49,9 @@ export default function Forms () {
   }}
 
 return (
-  <div >
+  <div  >
     <WithSubnavigation_3/>
-    <div >
+    <div classname="bg" bg = {useColorModeValue('#efefefff')} >
     <Container  bg = {useColorModeValue('#efefefff')}>
       
       <br/><br/>

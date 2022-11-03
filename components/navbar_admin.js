@@ -32,8 +32,8 @@ export default function WithSubnavigation_admin() {
   return (
     <Box>
       <Flex
-        bg={useColorModeValue('white', 'gray.800')}
-        color={useColorModeValue('gray.600', 'white')}
+
+
         minH={'60px'}
         py={{ base: 2 }}
         px={{ base: 4 }}
