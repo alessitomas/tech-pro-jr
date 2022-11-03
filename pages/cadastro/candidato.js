@@ -4,7 +4,7 @@ import { useState } from "react";
 import axios from "axios";
 import router from "next/router";
 import WithSubnavigation_3 from "../../components/navbar_CADASTROS";
-import { SimpleGrid, ButtonGroup, Box, Container, Input, Button, Flex, Stack, FormControl, FormLabel, Select } from '@chakra-ui/react'
+import { SimpleGrid, ButtonGroup, Box, Container, Input, Button, Flex, Stack, FormControl, FormLabel, Select, Checkbox ,CheckboxGroup} from "@chakra-ui/react";
 
 export default function Forms () {
   const [nome, setNome] = useState("");
@@ -71,11 +71,35 @@ return (
         <br/><br/>
         <p>Curso</p>
 
-        <Input onChange={({ target }) => setCurso(target?.value)} />
+        <FormControl>
+          <Select onChange={({ target }) => setCurso(target?.value)} placeholder='Escolha o seu curso' color= 'grey'>
+            <option> Administração</option>
+            <option> Ciência da Computação</option>
+            <option> Direito</option>
+            <option> Economia</option>
+            <option> Engenharia da Computação</option>
+            <option> Engenharia Mecânica</option>
+            <option> Engenharia Mecatrônica</option>
+v          </Select>
+        </FormControl>  
+
         <br/><br/>
 
         <p>Semestre</p>
-        <Input onChange={({ target }) => setSemestre(target?.value)} />
+        <FormControl>
+          <Select onChange={({ target }) => setSemestre(target?.value)} placeholder='Escolha o seu semestre' color= 'grey'>
+            <option> 1°</option>
+            <option> 2°</option>
+            <option> 3°</option>
+            <option> 4°</option>
+            <option> 5°</option>
+            <option> 6°</option>
+            <option> 7°</option>
+            <option> 8°</option>
+            <option> 9°</option>
+            <option> 10°</option>
+v          </Select>
+        </FormControl>  
         <br/><br/>
 
         <p>Área de Atuação</p>
@@ -88,8 +112,8 @@ return (
       <br></br>
 
         <p>Bolsista</p>
-        <FormControl>
-          <Select onChange={({ target }) => setBolsista(target?.value)} placeholder='Você é bolsista?' color= 'grey'>
+        <FormControl isRequired>
+          <Select onChange={({ target }) => setBolsista(target?.value)} placeholder='Escolha se possui bolsa' color= 'grey'>
             <option>Sim</option>
             <option>Não</option>
           </Select>
@@ -105,7 +129,15 @@ return (
         <br/><br/>
         <Stack variant="outline" spacing="5">
         <p>Horário de Disponibilidade</p>
-        <Input onChange={({ target }) => setHorario(target?.value)} />
+        <FormControl>
+        <CheckboxGroup onChange={({ target }) => setEmail(target?.value)}   colorScheme='red' defaultValue={[' Quarta - 18:45', ' Quinta - 20:15', ' Segunda - 19:15']}>
+        <Stack spacing={[10, 1]} direction={['column', 'row']}>
+        <Checkbox value='Quarta - 18:45'>Quarta - 18:45</Checkbox>
+        <Checkbox value='Quinta - 20:15'>Quinta - 20:15</Checkbox>
+        <Checkbox value='Segunda - 19:15'>Segunda - 19:15</Checkbox>
+        </Stack>
+        </CheckboxGroup>
+        </FormControl>  
         <br/>
 
       <Button
