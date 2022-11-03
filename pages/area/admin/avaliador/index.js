@@ -20,7 +20,7 @@ export default function Area_Candidato({ candidatos }) {
   return (
     <div className={styles.body}>
       <WithSubnavigation_admin/>
-      <h1 className={styles.title}>Candidatos</h1>
+      <h1 className={styles.title}>Avaliador</h1>
       <input className={styles.searchbar} type="text" placeholder="Procure um candidato" onChange={event => {setSearchTerm(event.target.value);}}/>
       <div className={styles.container}>
       <div className={styles.main}>
