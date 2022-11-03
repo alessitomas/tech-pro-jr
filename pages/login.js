@@ -74,6 +74,27 @@ export default function paginaLogin(){
                 }}>
                 Entrar
               </Button>
+
+              {/* area do avaliador */}
+              <Button
+                onClick = {() => router.push('/area/avaliador')}
+                bg={'red.500'}
+                color={'white'}
+                _hover={{
+                  bg: 'red.500',
+                }}>
+                Entrar como Avaliador
+              </Button>
+              {/* area do admin */}
+              <Button
+                onClick = {() => router.push('/area/admin/candidato')}
+                bg={'red.500'}
+                color={'white'}
+                _hover={{
+                  bg: 'red.500',
+                }}>
+                Entrar como Admin
+              </Button>
             </Stack>
           </Stack>
         </Box>
