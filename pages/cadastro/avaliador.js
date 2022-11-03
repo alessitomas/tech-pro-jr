@@ -3,13 +3,16 @@ import Head from "next/head";
 import { useState } from "react";
 import axios from "axios";
 import router from "next/router";
+import {useRouter} from 'next/router';
+import { useToast } from '@chakra-ui/react';
 
 import WithSubnavigation_admin from "../../components/navbar_admin";
 import { SimpleGrid, ButtonGroup, Box, Container, Input, Button, Flex, Stack, FormControl, FormLabel, Select, Checkbox ,CheckboxGroup} from "@chakra-ui/react";
 
 export default function Forms () {
   const [nome, setNome] = useState("");
-  const [horario, setGenero] = useState("");
+  const [horario, setHoras] = useState("");
+  const toast = useToast();
 
 
   const handleSubmit = async (event) => { 
@@ -43,7 +46,7 @@ return (
 
       <p>Disponibilidade de Horário</p>
       <FormControl>
-        <CheckboxGroup onChange={({ target }) => setEmail(target?.value)}   colorScheme='red' defaultValue={[' Quarta - 18:45', ' Quinta - 20:15', ' Segunda - 19:15']}>
+        <CheckboxGroup onChange={({ target }) => setHoras(target?.value)}   colorScheme='red' defaultValue={[' Quarta - 18:45', ' Quinta - 20:15', ' Segunda - 19:15']}>
         <Stack spacing={[10, 1]} direction={['column', 'row']}>
         <Checkbox value='Quarta - 18:45'>Quarta - 18:45</Checkbox>
         <Checkbox value='Quinta - 20:15'>Quinta - 20:15</Checkbox>
@@ -55,28 +58,20 @@ return (
 
 
       <Button
-        onClick = {handleSubmit}
-
-        // {...props}
-        // flex={1} 
-        px={10}
-        fontSize={'md'}
-        rounded={'full'}
-        bg={'red.400'}
-        color={'white'}
-        boxShadow={
-          '0px 1px 25px -5px rgb(66 153 225 / 48%), 0 10px 10px -5px rgb(66 153 225 / 43%)'
-        }
-
-        _hover={{
-          bg: 'red.500',
-        }}
-        _focus={{
-          bg: 'red.500',
-          
+        // onClick = {() = > {handleSubmit}
+        w="7rem"
+        colorScheme="red"
+        variant="solid"
+        onClick={() => {
+          toast({
+            title: 'Cadastrado.',
+            description: "O avaliador foi cadastrado!",
+            status: 'success',
+            duration: 3000,
+            isClosable: true,
+          });
         }}>
-        
-        cadastrar
+        Cadastrar
       </Button>
   </Container>
 </div>
