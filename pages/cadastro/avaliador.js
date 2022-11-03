@@ -42,7 +42,15 @@ return (
       <br/><br/>
 
       <p>Disponibilidade de Horário</p>
-      <Input onChange={({ target }) => setGenero(target?.value)} />
+      <FormControl>
+        <CheckboxGroup onChange={({ target }) => setEmail(target?.value)}   colorScheme='red' defaultValue={[' Quarta - 18:45', ' Quinta - 20:15', ' Segunda - 19:15']}>
+        <Stack spacing={[10, 1]} direction={['column', 'row']}>
+        <Checkbox value='Quarta - 18:45'>Quarta - 18:45</Checkbox>
+        <Checkbox value='Quinta - 20:15'>Quinta - 20:15</Checkbox>
+        <Checkbox value='Segunda - 19:15'>Segunda - 19:15</Checkbox>
+        </Stack>
+        </CheckboxGroup>
+      </FormControl>  
       <br/><br/>
 
 
