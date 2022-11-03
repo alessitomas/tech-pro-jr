@@ -36,6 +36,7 @@ export default function Area_Candidato({ candidatos }) {
         <Link href={'candidato/'+candidato.id} key={candidato.id}>
           <div className={styles.case_container}>
             <p>{candidato.name}</p>
+            <p>{candidato.email} </p>
           </div>
         </Link>
       ))}

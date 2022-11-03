@@ -19,9 +19,7 @@ import {
   
   const ServerQuickActions = () => {
     return (
-      /**
-       * You may move the Popover outside Flex.
-       */
+    
       <Flex justifyContent="center" mt={6}>
         <HStack spacing='100px'>
         <Popover placement="bottom" isLazy>
@@ -57,7 +55,6 @@ import {
                 </TabList>
                 <TabPanels>
                   <TabPanel>
-                    {/* You can add your content here. */}
                     XX/YY/ZZZZ
                   </TabPanel>
                   <TabPanel>
@@ -101,12 +98,10 @@ import {
                 </TabList>
                 <TabPanels>
                   <TabPanel>
-                    {/* You can add your content here. */}
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                    Elementum curabitur vitae nunc sed velit dignissim sodales ut
-                    eu. Mauris nunc congue nisi vitae suscipit tellus mauris a
-                    diam. Eros in cursus turpis massa tincidunt.
+                    XX/YY/ZZZZ
+                  </TabPanel>
+                  <TabPanel>
+                    Sala XYZ
                   </TabPanel>
                 </TabPanels>
               </Tabs>
@@ -145,13 +140,11 @@ import {
                   </Tab>
                 </TabList>
                 <TabPanels>
+                <TabPanel>
+                    XX/YY/ZZZZ
+                  </TabPanel>
                   <TabPanel>
-                    {/* You can add your content here. */}
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                    Elementum curabitur vitae nunc sed velit dignissim sodales ut
-                    eu. Mauris nunc congue nisi vitae suscipit tellus mauris a
-                    diam. Eros in cursus turpis massa tincidunt.
+                    Sala XYZ
                   </TabPanel>
                 </TabPanels>
               </Tabs>
@@ -190,13 +183,11 @@ import {
                   </Tab>
                 </TabList>
                 <TabPanels>
+                <TabPanel>
+                    XX/YY/ZZZZ
+                  </TabPanel>
                   <TabPanel>
-                    {/* You can add your content here. */}
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                    Elementum curabitur vitae nunc sed velit dignissim sodales ut
-                    eu. Mauris nunc congue nisi vitae suscipit tellus mauris a
-                    diam. Eros in cursus turpis massa tincidunt.
+                    Sala XYZ
                   </TabPanel>
                 </TabPanels>
               </Tabs>

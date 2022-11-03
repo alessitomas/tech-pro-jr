@@ -1,6 +1,5 @@
-import styles from '../../../../styles/id.module.css'
-
-import WithSubnavigation_3 from '../../../../components/navbar_CADASTROS'
+import styles from '../../../../styles/area_admin.module.css'
+import WithSubnavigation_admin from '../../../../components/navbar_admin'
 
 export const getStaticPaths = async () => {
     const res = await fetch('https://jsonplaceholder.typicode.com/users')
@@ -33,7 +32,7 @@ export const getStaticProps = async (context) => {
 const Details = (props) => {
     return ( 
         <>
-        < WithSubnavigation_3/>
+        < WithSubnavigation_admin/>
         <div className={styles.container}>
         <h1 className={styles.title}>Detalhes do candidato {props.candidato.name}</h1>
         <div className={styles.detail}>  
