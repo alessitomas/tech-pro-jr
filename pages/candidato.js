@@ -3,8 +3,10 @@ import Head from "next/head";
 import { useState } from "react";
 import axios from "axios";
 import router from "next/router";
+
 import WithSubnavigation_3 from "../../components/navbar_CADASTROS";
 import { SimpleGrid, ButtonGroup, Box, Container, Input, Button, Flex, Stack, FormControl, FormLabel, Select, Checkbox ,CheckboxGroup} from "@chakra-ui/react";
+
 
 export default function Forms () {
   const [nome, setNome] = useState("");

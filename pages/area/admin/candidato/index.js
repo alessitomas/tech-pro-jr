@@ -1,6 +1,7 @@
 import styles from '../../../../styles/area_admin.module.css'
 import Link from 'next/link'
-import { useState } from 'react'
+import WithSubnavegation_3 from '../../../../components/navbar_CADASTROS'
+import { useState } from "react";
 
 export const getStaticProps = async () => {
   const res = await fetch('https://jsonplaceholder.typicode.com/users')
@@ -17,9 +18,12 @@ export default function Area_Candidato({ candidatos }) {
   const [searchTerm, setSearchTerm] = useState("");
 
   return (
-    <div>
+    <div className={styles.body}>
+      <WithSubnavegation_3/>
       <input type="text" placeholder="Procure um candidato" onChange={event => {setSearchTerm(event.target.value);}}/>
-      <h1>Candidatos</h1>
+      <h1 className={styles.title}>Candidatos</h1>
+      <div className={styles.container}>
+      <div className={styles.main}>
       {candidatos.filter((val) => {
         if (searchTerm == "") {
           return val
@@ -27,13 +31,16 @@ export default function Area_Candidato({ candidatos }) {
           return val
         }
 
+
       }).map(candidato => (
         <Link href={'candidato/'+candidato.id} key={candidato.id}>
-          <div className={styles.single}>
-            <h3>{candidato.name}</h3>
+          <div className={styles.case_container}>
+            <p>{candidato.name}</p>
           </div>
         </Link>
       ))}
+    </div>
+    </div>
     </div>
       )
 }
