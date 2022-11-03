@@ -29,11 +29,29 @@
 .fase1, .fase2{
     padding:2%;
     border-color: black;
-
     border-width: 1px;
-
 }
-
+.gp1, .gp3{
+    padding:2%;
+    border-color: black;
+    border-width: 1px;
+    margin: 2%;
+    margin-left: 20%;
+    display: flex;
+    flex-direction: column;
+    padding-left: 5%;
+    width: 75%;
+}
+.gp2, .gp4{
+    padding:2%;
+    border-color: black;
+    border-width: 1px;
+    margin: 2%;
+    display: flex;
+    flex-direction: column;
+    padding-left: 5%; 
+    width: 75%;
+}
 .li{
     margin: 2px;
 }
