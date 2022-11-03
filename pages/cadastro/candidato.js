@@ -51,8 +51,8 @@ export default function Forms () {
 return (
   <div >
     <WithSubnavigation_3/>
-    <div class="bg">
-    <Container  >
+    <div >
+    <Container  bg = {useColorModeValue('#efefefff')}>
       
       <br/><br/>
       <p>Nome Completo</p>
@@ -60,7 +60,7 @@ return (
         <br/><br/>
 
         <p>Gênero</p>
-        <FormControl>
+        <FormControl bg = {useColorModeValue('#efefefff')}>
           <Select onChange={({ target }) => setGenero(target?.value)} placeholder='Gênero' color= 'grey'>
             <option>Homem</option>
             <option>Mulher</option>
@@ -74,7 +74,7 @@ return (
         <br/><br/>
         <p>Curso</p>
 
-        <FormControl>
+        <FormControl bg = {useColorModeValue('#efefefff')}>
           <Select onChange={({ target }) => setCurso(target?.value)} placeholder='Escolha o seu curso' color= 'grey'>
             <option> Administração</option>
             <option> Ciência da Computação</option>
@@ -89,7 +89,7 @@ v          </Select>
         <br/><br/>
 
         <p>Semestre</p>
-        <FormControl>
+        <FormControl bg = {useColorModeValue('#efefefff')}>
           <Select onChange={({ target }) => setSemestre(target?.value)} placeholder='Escolha o seu semestre' color= 'grey'>
             <option> 1°</option>
             <option> 2°</option>
@@ -106,7 +106,7 @@ v          </Select>
         <br/><br/>
 
         <p>Área de Atuação</p>
-        <FormControl>
+        <FormControl bg = {useColorModeValue('#efefefff')}>
           <Select onChange={({ target }) => setAtuacao(target?.value)} placeholder='Escolha sua área de atuação' color= 'grey'>
             <option>Business</option>
             <option>Engenharia</option>
@@ -115,7 +115,7 @@ v          </Select>
       <br></br>
 
         <p>Bolsista</p>
-        <FormControl isRequired>
+        <FormControl isRequired bg = {useColorModeValue('#efefefff')}>
           <Select onChange={({ target }) => setBolsista(target?.value)} placeholder='Escolha se possui bolsa' color= 'grey'>
             <option>Sim</option>
             <option>Não</option>

@@ -66,7 +66,9 @@ export default function WithSubnavigation_admin() {
           height = '70px'
           src='/insper_junior_logo_inteiro.png'
           alt='Insper Jr.'
-        />
+          onClick = {() => router.push('/')}
+          cursor = {'pointer'}
+          />
           <Flex display={{ base: 'none', md: 'flex' }} ml={10}>
           </Flex>
         </Flex>
