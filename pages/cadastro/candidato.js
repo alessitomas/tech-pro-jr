@@ -4,7 +4,7 @@ import { useState } from "react";
 import axios from "axios";
 import router from "next/router";
 import WithSubnavigation_3 from "../../components/navbar_CADASTROS";
-import { SimpleGrid, ButtonGroup, Box, Container, Input, Button, Flex, Stack } from '@chakra-ui/react'
+import { SimpleGrid, ButtonGroup, Box, Container, Input, Button, Flex, Stack, FormControl, FormLabel, Select } from '@chakra-ui/react'
 
 export default function Forms () {
   const [nome, setNome] = useState("");
@@ -57,11 +57,17 @@ return (
         <br/><br/>
 
         <p>Gênero</p>
-        <Input onChange={({ target }) => setGenero(target?.value)} placeholder='M/H'/>
+        <FormControl>
+          <Select onChange={({ target }) => setGenero(target?.value)} placeholder='Gênero' color= 'grey'>
+            <option>Homem</option>
+            <option>Mulher</option>
+          </Select>
+        </FormControl> 
         <br/><br/>
 
         <p>Data de Nascimento</p>
-        <Input onChange={({ target }) => setNascimento(target?.value)}   placeholder='XX/XX/XXXX'/>
+        <Input onChange={({ target }) => setNascimento(target?.value)} placeholder="Selecione o Dia" size="md" type="date"/>
+
         <br/><br/>
         <p>Curso</p>
 
@@ -73,13 +79,23 @@ return (
         <br/><br/>
 
         <p>Área de Atuação</p>
-        <Input onChange={({ target }) => setAtuacao(target?.value)} placeholder='Business/Engenharia'/>
-        <br/><br/>
+        <FormControl>
+          <Select onChange={({ target }) => setAtuacao(target?.value)} placeholder='Escolha sua área de atuação' color= 'grey'>
+            <option>Business</option>
+            <option>Engenharia</option>
+          </Select>
+        </FormControl>  
+      <br></br>
 
         <p>Bolsista</p>
-        <Input onChange={({ target }) => setBolsista(target?.value)}  placeholder='Sim/Não'/>
+        <FormControl>
+          <Select onChange={({ target }) => setBolsista(target?.value)} placeholder='Você é bolsista?' color= 'grey'>
+            <option>Sim</option>
+            <option>Não</option>
+          </Select>
+        </FormControl>  
         <br/><br/>
-
+        
         <p>Número de celular</p>
         <Input onChange={({ target }) => setCelular(target?.value)}  placeholder='+11 (99) 9999-9999'/>
         <br/><br/>
