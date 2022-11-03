@@ -3,7 +3,7 @@ import Head from "next/head";
 import WithSubnavigation_3 from "../../components/navbar_CADASTROS";
 import ServerQuickActions from '../../components/botao/botao_candidatos';
 import {Box, Flex, VStack, Textarea, Spacer} from '@chakra-ui/react'
-
+import  FollowButtonWithShadow_3 from '../../components/botao/botao_submit'
 function Area_do_avaliador(){
   
   return (
@@ -39,6 +39,7 @@ function Area_do_avaliador(){
       <Textarea w = '55%' bg = 'grey.100' placeholder='Avaliação dos candidatos' />
       </Flex>
       </Box>
+      <FollowButtonWithShadow_3/>
     </VStack>
        
 
