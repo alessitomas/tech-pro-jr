@@ -25,7 +25,7 @@ import {
   ChevronRightIcon,
 } from '@chakra-ui/icons';
 
-export default function WithSubnavigation() {
+export default function WithSubnavigation_admin() {
   const { isOpen, onToggle } = useDisclosure();
   const router = useRouter();
 
@@ -67,36 +67,58 @@ export default function WithSubnavigation() {
           src='/insper_junior_logo_inteiro.png'
           alt='Insper Jr.'
         />
-          {/* <Flex display={{ base: 'none', md: 'flex' }} ml={10}> */}
-          {/* </Flex> */}
+          <Flex display={{ base: 'none', md: 'flex' }} ml={10}>
+          </Flex>
         </Flex>
         <Stack
           flex={{ base: 1, md: 0 }}
           justify={'flex-end'}
           direction={'row'}
           spacing={6}>
+
+
+        <Button
+            cursor = {'pointer'}
+            as={'a'}
+            fontSize={'sm'}
+            fontWeight={400}
+            variant={'link'}
+            onClick = {() => router.push('/area/admin/candidato')}
+          >
+            Candidatos
+          </Button>
+            <Button
+            cursor = {'pointer'}
+            as={'a'}
+            fontSize={'sm'}
+            fontWeight={400}
+            variant={'link'}
+            onClick = {() => router.push('/area/admin/avaliador')}
+          >
+            Avaliador
+          </Button>
+
           <Button
             cursor = {'pointer'}
             as={'a'}
             fontSize={'sm'}
             fontWeight={400}
             variant={'link'}
-            onClick = {() => router.push('/login')}
+            onClick = {() => router.push('/area/admin/alocacoes')}
           >
-            Entrar
+            Alocações
           </Button>
-          
           <Button
             display={{ base: 'none', md: 'inline-flex' }}
             fontSize={'sm'}
             fontWeight={600}
             color={'white'}
             bg={'red.500'}
-            onClick = {() => router.push('/cadastro/candidato')}
+            onClick = {() => router.push('/')}
             _hover={{
               bg: 'red.400',
             }}>
-            Cadastre-se
+            Sair
           </Button>
         </Stack>
       </Flex>
