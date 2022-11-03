@@ -67,8 +67,8 @@ export default function WithSubnavigation() {
           src='/insper_junior_logo_inteiro.png'
           alt='Insper Jr.'
         />
-          <Flex display={{ base: 'none', md: 'flex' }} ml={10}>
-          </Flex>
+          {/* <Flex display={{ base: 'none', md: 'flex' }} ml={10}> */}
+          {/* </Flex> */}
         </Flex>
         <Stack
           flex={{ base: 1, md: 0 }}
@@ -85,6 +85,7 @@ export default function WithSubnavigation() {
           >
             Entrar
           </Button>
+          
           <Button
             display={{ base: 'none', md: 'inline-flex' }}
             fontSize={'sm'}
