@@ -1,29 +1,4 @@
-/* .container{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-}
-.single:hover {
-    border-left: 8px solid rgb(255, 18, 18)
-}
-.title{
-    display: flex;
-
-    justify-content: center;
-    width: 100%;
-    font-size: 20px;
-    font-weight: 600;
-    color: #000;
-    margin-bottom: 10px;
-}
-  .case_container {
-    display: grid;
-    box-shadow: 0 7px 20px rgb(0 0 0 / 15%), 0 2px 3px rgb(0 0 0 / 22%);
- 
-    overflow-wrap: anywhere;
-  } */
-
-   .container {
+    .container {
     padding-top: 50px;
     height: 100vh;
     overflow: auto;
@@ -62,4 +37,23 @@
 .body{
     background-color: #efefefff;
     height: 100vh;
+}
+
+.searchbar {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2rem;
+    width: 40%;
+    border-radius: 15rem;
+    padding-left: 1rem;
+}
+
+.searchbar:placeholder-shown {
+    padding-left: 1rem;
+}
+
+.searchbar:focus {
+    outline: none;
+    border: 0.1rem solid #e53e3e;
 }
