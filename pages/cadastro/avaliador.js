@@ -68,7 +68,7 @@ return (
           
         }}>
         
-        cadastrar
+        Cadastrar
       </Button>
   </Container>
 </div>

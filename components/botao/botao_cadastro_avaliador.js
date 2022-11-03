@@ -5,13 +5,13 @@ export default function FollowButtonWithShadow() {
   const router = useRouter();
 
   return (
-    <Flex h="10vh" w='40%' justifyContent="center" alignItems="center">
+    <Flex h="10vh"  justifyContent="center" alignItems="center">
       <Button
         onClick = {() => router.push('/cadastro/avaliador')}
 
         // {...props}
-        mr={250}
-        ml={250}
+        mr={500}
+        ml={500}
         flex={1} 
         px={8}
         fontSize={'sm'}
