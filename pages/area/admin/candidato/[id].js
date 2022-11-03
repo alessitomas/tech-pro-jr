@@ -33,13 +33,41 @@ const Details = (props) => {
     return ( 
         <>
         < WithSubnavigation_admin/>
-
+        <div className={styles.container}>
+        <h1 className={styles.title}>Detalhes do candidato {props.candidato.name}</h1>
         <div className={styles.detail}>  
-            <h1> {props.candidato.name} </h1>
-            <p> {props.candidato.email} </p>
-            <p> {props.candidato.website} </p>
-            <p> {props.candidato.address.city} </p>
+            <div className = {styles.detail__item}>
+                <p className={styles.label}> Nome </p> <p> {props.candidato.name} </p>
+            </div>
+            <div className = {styles.detail__item}>
+                <p className={styles.label}> Email </p> <p> {props.candidato.email} </p>
+            </div>
+            <div className = {styles.detail__item}>
+                <p className={styles.label}> Gênero </p> <p> {props.candidato.website} </p>
+            </div>
+            <div className = {styles.detail__item}>
+                <p className={styles.label}> Data de Nascimento </p> <p> {props.candidato.address.city} </p>
+            </div>
+            <div className = {styles.detail__item}>
+                <p className={styles.label}> Curso </p> <p> {props.candidato.name} </p>
+            </div>
+            <div className = {styles.detail__item}>
+                <p className={styles.label}> Semestre </p> <p> {props.candidato.email} </p>
+            </div>
+            <div className = {styles.detail__item}>
+                <p className={styles.label}> Área de atuação </p> <p> {props.candidato.website} </p>
+            </div>
+            <div className = {styles.detail__item}>
+                <p className={styles.label}> Bolsista </p> <p> {props.candidato.address.city} </p>
+            </div>
+            <div className = {styles.detail__item}>
+                <p className={styles.label}> Número de celular </p> <p> {props.candidato.name} </p>
+            </div>
+            
+            
+        
         </div>
+        </div>  
             </>
      );
 }

@@ -5,7 +5,7 @@ import axios from "axios";
 import router from "next/router";
 
 import WithSubnavigation_3 from "../../components/navbar_CADASTROS";
-import { SimpleGrid, ButtonGroup, Box, Container, Input, Button, Flex, Stack, FormControl, FormLabel, Select, Checkbox ,CheckboxGroup} from "@chakra-ui/react";
+import { SimpleGrid, ButtonGroup, Box, Container, Input, Button, Flex, Stack, FormControl, FormLabel, Select, Checkbox ,CheckboxGroup,useColorModeValue} from "@chakra-ui/react";
 
 
 export default function Forms () {
@@ -49,9 +49,10 @@ export default function Forms () {
   }}
 
 return (
-  <div>
+  <div >
     <WithSubnavigation_3/>
-    <Container>
+    <div class="bg">
+    <Container  >
       
       <br/><br/>
       <p>Nome Completo</p>
@@ -130,7 +131,7 @@ v          </Select>
         <Input onChange={({ target }) => setEmail(target?.value)}  placeholder='email@email.com.br'/>
         <br/><br/>
         <Stack variant="outline" spacing="5">
-        <p>Horário de Disponibilidade</p>
+        <p>Horário de Disponibilidade para a 1ª Fase</p>
         <FormControl>
         <CheckboxGroup onChange={({ target }) => setEmail(target?.value)}   colorScheme='red' defaultValue={[' Quarta - 18:45', ' Quinta - 20:15', ' Segunda - 19:15']}>
         <Stack spacing={[10, 1]} direction={['column', 'row']}>
@@ -173,5 +174,7 @@ v          </Select>
     </Stack>
   </Container>
   </div>
+  </div>
+
 )
   }
