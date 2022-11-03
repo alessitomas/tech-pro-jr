@@ -34,10 +34,7 @@
     justify-content: center;
 
 }
-.body{
-    background-color: #efefefff;
-    height: 100vh;
-}
+
 
 .searchbar {
     display: block;
@@ -45,15 +42,12 @@
     margin-right: auto;
     margin-top: 2rem;
     width: 40%;
+    border-color: black;
+    border-width: 2px;
     border-radius: 15rem;
     padding-left: 1rem;
 }
 
 .searchbar:placeholder-shown {
     padding-left: 1rem;
-}
-
-.searchbar:focus {
-    outline: none;
-    border: 0.1rem solid #e53e3e;
 }

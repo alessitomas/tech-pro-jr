@@ -17,14 +17,14 @@ function Area_do_candidato(){
 
     <WithSubnavigation_3/>
       <ServerQuickActions/>
-    <Box h='60px' bg=''></Box>
+    <Box h='60px' ></Box>
 
       <Flex 
         align={'center'}
         justify={'center'}>
 
       
-        <Box bg='' border='1px' w='40%' p={4} color='black'>
+        <Box  border='1px' w='40%' p={4} color='black'>
         
           <p>Candidato:</p>
           <br></br>

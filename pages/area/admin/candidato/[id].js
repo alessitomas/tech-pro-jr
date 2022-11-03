@@ -1,4 +1,4 @@
-import styles from '../../../../styles/area_admin.module.css'
+import styles from '../../../../styles/id.module.css'
 import WithSubnavigation_admin from '../../../../components/navbar_admin'
 
 export const getStaticPaths = async () => {
