@@ -32,7 +32,7 @@ export const getStaticProps = async (context) => {
 const Details = (props) => {
     return ( 
         <>
-        < WithSubnavigation_admin/>
+        <WithSubnavigation_admin/>
 
         <div className={styles.detail}>  
             <h1> {props.candidato.name} </h1>
