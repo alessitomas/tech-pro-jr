@@ -16,9 +16,9 @@ function inicialPage(){
       </Head>
       <div class="body">
         <div class="intro">
-        <h2 class="ps" >Insper Processo Seletivo</h2>
+        <h2 class="ps" >Insper Junior Processo Seletivo</h2>
         
-        <p class="texto" > Nós da Insper Jr. somos uma empresa de consultoria formada exclusivamente por alunos do Insper, sem fins lucrativos, que visa impactar a sociedade por meio da superação de desafios.
+        <p mr={40} class="texto" > Nós da Insper Jr. somos uma empresa de consultoria formada exclusivamente por alunos do Insper, sem fins lucrativos, que visa impactar a sociedade por meio da superação de desafios.
         A fim de entregar excelência aos nossos clientes, trabalhamos em um ambiente colaborativo, com perfis e habilidades complementares, que busca pessoas inconformadas e comprometidas com nosso propósito de transformar realidades através de projetos.
         Em 2021, mesmo diante do contexto da pandemia do COVID-19, nosso faturamento superou R$ 700 mil, nos colocando como uma das maiores empresas juniores do Brasil.
         Para 2022 queremos atingir patamares cada vez maiores. Venha fazer parte do processo seletivo! </p>
